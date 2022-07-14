@@ -78,12 +78,12 @@
                 </div>
             </div>
             <div class="row justify-content-center fs-5 text-center ">
-                <div class="col-md-4" data-aos="fade-right" data-aos-duration="1000">
+                <div class="col-md-4" data-aos="fade-right">
                     <p>Nama saya Ilham Alhadi Firmansyah, nama panggilan Ilham, merupakan lulusan dari
                         Universitas Putra Indonesia "YPTK" Padang dengan Jurusan Sistem Informasi fakultas Ilmu
                         Komputer!</p>
                 </div>
-                <div class="col-md-4" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                <div class="col-md-4" data-aos="fade-left" data-aos-delay="200">
                     <p>Memliliki Basic Skill sebagai seorang Web Developer kurang lebih 2 tahun pengalaman dalam
                         mengembangkan Web menggunakan beberapa Teknologi seperti Framework PHP, Javascript, dan
                         framework
@@ -164,6 +164,70 @@
     </section>
     <!-- End of Projects -->
 
+    <!-- Gallery -->
+    <section id="gallery">
+        <div class="container">
+            <div class="row text-center mb-3">
+                <div class="col">
+                    <h2>Gallery</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-3">
+                    <a href="#">
+                        <img src="img/gallery/thumbnail/1.jpg" alt="Gambar1" class="img-fluid gallery-img">
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#">
+                        <img src="img/gallery/thumbnail/2.jpg" alt="Gambar2" class="img-fluid gallery-img">
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#">
+                        <img src="img/gallery/thumbnail/3.jpg" alt="Gambar3" class="img-fluid gallery-img">
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#">
+                        <img src="img/gallery/thumbnail/4.jpg" alt="Gambar4" class="img-fluid gallery-img">
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#">
+                        <img src="img/gallery/thumbnail/5.jpg" alt="Gambar5" class="img-fluid gallery-img">
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#">
+                        <img src="img/gallery/thumbnail/6.jpg" alt="Gambar6" class="img-fluid gallery-img">
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#">
+                        <img src="img/gallery/thumbnail/7.jpg" alt="Gambar7" class="img-fluid gallery-img">
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#">
+                        <img src="img/gallery/thumbnail/8.jpg" alt="Gambar8" class="img-fluid gallery-img">
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#">
+                        <img src="img/gallery/thumbnail/9.jpg" alt="Gambar9" class="img-fluid gallery-img">
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#">
+                        <img src="img/gallery/thumbnail/10.jpg" alt="Gambar10" class="img-fluid gallery-img">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Akhir Gallery -->
+
     <!-- Contact -->
     <section id="contact">
         <div class="container">
@@ -210,7 +274,18 @@
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        AOS.init();
+        const galleryImage = document.querySelectorAll('.gallery-img');
+
+        galleryImage.forEach((img, i) => {
+            img.dataset.aos = 'fade-down';
+            img.dataset.aosDelay = i * 100;
+            img.dataset.aosDuration = 1000;
+        })
+
+        AOS.init({
+            once: true,
+            duration: 2000,
+        });
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
